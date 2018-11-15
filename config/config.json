@@ -11,9 +11,7 @@
       ]
     }
   },
-  "externals": {
-    "aurelia-react-element": "node_modules/aurelia-react-element/index.js"
-  },
+  "externals": {},
   "localizedResources": {
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
   }
