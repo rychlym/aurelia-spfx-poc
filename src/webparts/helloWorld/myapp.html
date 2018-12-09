@@ -1,8 +1,26 @@
 <template>
-    <require from="aurelia-react-wrapper"></require>
-    Hello ${message} !!
-    <br/>
-    <color-picker color.two-way="color" ></color-picker>
-    <br/>
-    <b>Color: ${color}</b>
-  </template>
+  <require from="aurelia-react-wrapper"></require>
+  <require from="./components/panel"></require>
+  <link rel="stylesheet" href="../../../node_modules/office-ui-fabric/dist/components/Button/Button.min.css" />    
+  Hello !!
+  <br />
+  <color-picker color.two-way="color"></color-picker>
+  <b>Color: ${color}</b>
+  <br /><br/>
+  <button class="ms-Button ms-Button--primary" click.delegate="togglePanel()">
+    <span class="ms-Button-label">Toggle Panel Visibility</span>
+  </button>
+  <span>Panel Open: ${panelOpen}</span>
+
+  <Panel open.two-way="panelOpen" title="Luju's Demo Panel" position="left" size="lg">
+    <input type="text" value.bind="propertyPanelValue">
+    <br />
+    <span>${propertyPanelValue}</span>
+    <br />
+    <button class="ms-Button" click.delegate="resetPropertyPaneValue()" disabled.bind="!propertyPanelValue">
+      <span class="ms-Button-label">Reset Value</span>
+    </button>
+    <br />
+    <div>This is some text inside the panel</div>
+  </Panel>
+</template>

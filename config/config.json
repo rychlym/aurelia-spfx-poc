@@ -11,7 +11,12 @@
       ]
     }
   },
-  "externals": {},
+  "externals": {
+    "ofice-ui-fabric-js": {
+      "path": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js",
+      "globalName": "ofice-ui-fabric-js"
+    }
+  },
   "localizedResources": {
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
   }

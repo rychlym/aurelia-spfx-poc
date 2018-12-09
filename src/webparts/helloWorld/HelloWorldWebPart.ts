@@ -27,7 +27,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     Bluebird.config({ warnings: { wForgottenReturn: false } });
   }
 
-  render() {
+  public render() {
     this.domElement.innerHTML = `<div id="${this.instanceId}" class="${this.instanceId}">Loading...</div>`;
   
     require(['aurelia-bootstrapper'], au => {

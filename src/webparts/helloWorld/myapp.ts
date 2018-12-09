@@ -1,6 +1,16 @@
+declare var fabric: any;
 export class myapp {
-  message = "World...";
+  
+  public color = "#abcdef";
 
-  color = "#ffffff";
+  protected togglePanel() {
+    this.panelOpen = !this.panelOpen;
+  }
+  public panelOpen = false;
+
+  protected resetPropertyPaneValue() {
+    this.propertyPanelValue = '';
+  }
+  public propertyPanelValue = '';
 }
   
