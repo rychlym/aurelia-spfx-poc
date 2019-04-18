@@ -10,7 +10,7 @@ import { Aurelia } from 'aurelia-framework';
   import { PLATFORM } from "aurelia-pal";
   import * as Bluebird from 'bluebird';
 
-  
+
 
 
 import styles from './HelloWorldWebPart.module.scss';
@@ -29,13 +29,13 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 
   public render() {
     this.domElement.innerHTML = `<div id="${this.instanceId}" class="${this.instanceId}">Loading...</div>`;
-  
+
     require(['aurelia-bootstrapper'], au => {
       au.bootstrap(aurelia => {
           aurelia.use
             .standardConfiguration()
             .developmentLogging();
-  
+
           var el = document.getElementById(this.instanceId);
           aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('webparts/helloWorld/myapp'), el));
         }
